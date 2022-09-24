@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:umtc_bluebook_checker_app/route/app_route.dart' as route;
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -67,8 +68,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 60.h,
                 ),
                 MaterialButton(
-                  onPressed: () => {},
-                  padding: const EdgeInsets.fromLTRB(40, 20, 40, 20),
+                  onPressed: () =>
+                      Navigator.of(context).pushNamed(route.dashboard),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                   color: Colors.blue,
                   textColor: Colors.white,
                   child: const Text("Connect Now"),
